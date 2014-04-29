@@ -51,7 +51,7 @@ vim: ts=2 sw=2:
   <h2>Talking about...</h2>
   <ul>
     <li class="slide">BEL in the Semantic Web</li>
-    <li class="slide">bel.rb: Swiss army knife for BEL</li>
+    <li class="slide">Processing BEL with Ruby</li>
   </ul>
 </section>
 
@@ -108,41 +108,41 @@ vim: ts=2 sw=2:
 
 <section class="slide" id="belrb_intro">
   <div class="vcenter">
-    <h1>bel.rb: Swiss army knife for BEL</h1>
+    <h1>Processing BEL with Ruby</h1>
     <h3><a href="http://wiki.openbel.org/display/BEL2RDF/BEL+to+RDF+Home">BEL to RDF (wiki)</a></h3>
   </div>
 </section>
 
 <section class="slide" id="belrb_why_ruby?">
-  <h2>Why use ruby?</h2>
+  <h2>Why use Ruby?</h2>
   <ul>
     <li>Simple, Elegant, and Expressive</li>
     <li>Conducive to domain-specific language</li>
-    <li>Interoperability with Java using JRuby</li>
+    <li>Works on Java using JRuby</li>
   </ul>
   <pre class="prettyprint">
-    <code># No fuss
+# No fuss
 File.read 'small_corpus.bel'
 
 # Expressive
 3.times do say "Hello, OpenBEL!" end
 
 # Domain-specific languages
-tscript(p(HGNC['AKT1'])).increases p(HGNC['BRAF'])</code>
+tscript(p(HGNC['AKT1'])).increases p(HGNC['BRAF'])
   </pre>
 </section>
 
 <section class="slide" id="belrb_design">
-  <h2>bel.rb design</h2>
+  <h2>Design</h2>
   <ul>
     <li>Accessible and easy to use</li>
-    <li>Full featured</li>
-    <li>Capture BEL specifications in ruby code</li>
+    <li>Fully featured</li>
+    <li>Capture BEL specifications in Ruby code</li>
   </ul>
 </section>
 
 <section class="slide" id="belrb_capabilities">
-  <h2>bel.rb capabilities</h2>
+  <h2>Capabilities</h2>
   <ul>
     <li>Accessible and easy to use</li>
     <li>Full featured</li>
@@ -151,11 +151,10 @@ tscript(p(HGNC['AKT1'])).increases p(HGNC['BRAF'])</code>
 </section>
 
 <section class="slide" id="belrb_purpose">
-  <h2>Where does it fit?</h2>
-  <p>Stand-alone library / Backbone of openbel-server</p>
-  <p>
+  <h2>Where does it fit in OpenBEL?</h2>
+  <p>Stand-alone library</p>
+  <p>Backbone of openbel-server</p>
   <img width="800" src="design.svg" />
-</p>
 </section>
 
 <section class="slide" id="belrb_demo">
