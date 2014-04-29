@@ -57,51 +57,104 @@ vim: ts=2 sw=2:
 
 <section class="slide" id="rdf_intro">
   <div class="vcenter">
-    <h1>BEL in the Semantic Web</h1>
+    <h1>BEL to RDF</h1>
     <h3><a href="http://wiki.openbel.org/display/BEL2RDF/BEL+to+RDF+Home">BEL to RDF (wiki)</a></h3>
   </div>
 </section>
 
-<section class="slide" id="rdf_what_is_it?">
-  <!-- brief description: subject, predicate, object -->
-</section>
-
 <section class="slide" id="rdf_motivations">
-  <!-- KAM silo vs RDF data -->
-  <!-- (visual) -->
+  <!-- Analogy: connecting networks and apis in reference to RDF data -->
+  <h2>Why use an RDF model for BEL?</h2>
+  <ul>
+    <li class="slide">Shared representation of biological data</li>
+    <li class="slide">Publish BEL RDF vocabulary back to the community</li>
+    <li class="slide">More easily connect knowledge graphs</li>
+  </ul>
 </section>
 
-<section class="slide" id="rdf_lod_cloud">
-  <!-- Connecting with the Linked Open Data cloud -->
-</section>
-
-<section class="slide" id="rdf_mapping_bel">
-  <!-- How BEL maps to RDF -->
+<section class="slide" id="rdf_design">
+  <!-- Analogy: connecting networks and apis in reference to RDF data -->
+  <h2>Design guidelines</h2>
+  <ul>
+    <li class="slide">Convert biological identifiers to canonical form</li>
+    <li class="slide">HGNC:AKT1 maps to EGID:207</li>
+    <li class="slide">MESHPP:Apoptosis maps to GOBP:"apoptotic process"</li>
+    </li>
+    <li class="slide">Establish term and statement URIs using this canonical form</li>
+    <li class="slide">Reuse standard vocabularies</li>
+  </ul>
 </section>
 
 <section class="slide" id="rdf_namespaces">
-  <!-- Mapping namespaces -->
+  <h2>Concepts: Schema</h2>
+  <img src="concept-schema.png" />
+  <ul>
+    <li class="slide">Derived from the SKOS vocabulary</li>
+    <li class="slide">Capture biological concepts</li><ul>
+      <li class="slide">identifiers, preferred names, and synonyms</li>
+      <li class="slide">equivalences between concepts</li>
+      <li class="slide">orthology between concepts</li>
+    </ul>
+  </ul>
 </section>
 
-<section class="slide" id="rdf_terms">
-  <!-- Mapping terms -->
+<section class="slide" id="rdf_braf">
+  <h2>Concepts: BRAF example</h2>
+  <img src="braf.png" />
 </section>
 
-<section class="slide" id="rdf_statements">
-  <!-- Mapping statements -->
+<section class="slide" id="rdf_mapping_bel">
+  <h2>BEL</h2>
+  <img src="main-schema.png" />
+  <ul>
+    <li class="slide">Describes Terms, Statement and Evidence</li>
+    <li class="slide">Capture biological concepts</li>
+  </ul>
 </section>
 
-<section class="slide" id="rdf_evidence">
-  <!-- Mapping evidence -->
+<section class="slide" id="terms">
+  <h2>BEL Term</h2>
+  <blockquote>kin(p(HGNC:ATR))</blockquote>
+  <img src="terms.png" />
 </section>
 
-<section class="slide" id="rdf_query1">
+<section class="slide" id="terms">
+  <h2>BEL Term</h2>
+  <blockquote>p(HGNC:TP53, pmod(P, S, 15))</blockquote>
+  <img src="modification.png" />
 </section>
 
-<section class="slide" id="rdf_query2">
+<section class="slide" id="statements">
+  <h2>BEL Statement</h2>
+  <blockquote>kin(p(HGNC:ATR)) => p(HGNC:TP53, pmod(P, S, 15))</blockquote>
+  <img src="statement.png" />
+</section>
+
+<section class="slide" id="evidence">
+  <h2>Evidence</h2>
+  <blockquote>kin(p(HGNC:ATR)) => p(HGNC:TP53, pmod(P, S, 15))</blockquote>
+  <img src="evidence.png" />
+</section>
+
+<section class="slide" id="rdf_summary">
+  <h2>Summary</h2>
+  <ul>
+    <li class="slide">Derived from the SKOS vocabulary</li>
+    <li class="slide">Capture biological concepts</li><ul>
+      <li class="slide">identifiers, preferred names, and synonyms</li>
+      <li class="slide">equivalences between concepts</li>
+      <li class="slide">orthology between concepts</li>
+    </ul>
+  </ul>
 </section>
 
 <section class="slide" id="rdf_learn_more">
+  <h2>Learn More</h2>
+  <ul>
+    <li class="slide"><a href="http://build.openbel.org/browse/OR">RDF build of namespaces</a></li>
+    <li class="slide"><a href="http://wiki.openbel.org/display/BEL2RDF/BEL+to+RDF+Home">Wiki space for BEL 2 RDF</a></li>
+    <li class="slide">Public SPARQL endpoint with BEL corpora to follow soon</li>
+  </ul>
 </section>
 
 <!-- *********************************** -->
